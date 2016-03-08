@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: KDE 台灣支援站
+email: help@linux.org.tw
+description: > # this means to ignore newlines until "baseurl:"
+  KDE 台灣站是由一群自由軟體社群的熱血志工打造並維護的。<br>
+  在這裡，我們將不定時分享/翻譯關於 K 桌面環境的新知。<br>
+  目前台灣在地化的 K 桌面環境發行版有 ezgo 計畫，以及計畫背後的 KDE 中文化翻譯人員。<br>
+  假如您對貢獻自由軟體十分有興趣的話，歡迎讓我們知道。
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://kde.linux.org.tw" # the base hostname & protocol for your site
+#twitter_username: brli7848
+#github_username:  brli
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Chakra 釋出 Plasma 桌面的安全性更新"
+date:   2016-03-08 18:26:48 +0800
+categories: chakra update
+---
+Chakra 近日釋出安全性更新
