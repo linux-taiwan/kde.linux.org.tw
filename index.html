@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta  content="text/html; charset=UTF-8"  http-equiv="content-type">
-    <title>KDE 正體中文支援站</title>
-	<link rel="stylesheet" href="/style.css">
-  </head>
-  <body>
-    <img src="/images/menu_icon.svg" alt="menu icon" id="menu" width="20" height="20">
-    <main>
-    <h1>KDE 正體中文支援站</h1>
-    <p>這裡是 KDE 的非官方正體中文支援站，您可以在此獲得協助。</p>
-      <a  href="https://www.kde.org/">KDE 官方網站</a>
-    </main>
-    <footer>
-      <img src="/images/kde_icon.svg" alt="kde icon" width="30" height="30">
-      <div class="status_bar">
-        <time>16:49</time>
-        <img src="/images/menu_icon.svg" alt="menu icon">
-      </div>
-    </footer>
-  </body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
