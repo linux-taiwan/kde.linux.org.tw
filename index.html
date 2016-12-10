@@ -1,23 +1,15 @@
 ---
 layout: default
+title: 首頁
+bodyclass: home
 ---
 
-<div class="home">
+<section class="posts txt-center container">
 
-  <h1 class="page-heading">Posts</h1>
+    <p>KDE 台灣站是由一群自由軟體社群的熱血志工打造並維護的。
+在這裡，我們將不定時分享/翻譯關於 K 桌面環境的新知。
+目前台灣在地化的 K 桌面環境發行版有 ezgo 計畫，以及計畫背後的 KDE 中文化翻譯人員。
+假如您對貢獻自由軟體十分有興趣的話，歡迎讓我們知道。 </p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+</section>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>

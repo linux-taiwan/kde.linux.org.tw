@@ -1,0 +1,55 @@
+/* nav */
+nav ul li {
+    display: inline-block;
+    margin-top: 41px;
+}
+
+nav ul h2 {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+nav a {
+    color: #555;
+}
+
+/* nav link icons */
+#nav1 {
+    background-image: url("/images/green.icon.png");
+}
+
+#nav1:hover {
+    text-shadow: #acff08 0 0 18px;
+}
+
+#nav2 {
+    background-image: url("/images/orange.icon.png");
+}
+
+#nav2:hover {
+    text-shadow: #ffae00 0 0 18px;
+}
+
+#nav3 {
+    background-image: url("/images/red.icon.png");
+}
+
+#nav3:hover {
+    text-shadow: #ff96af 0 0 18px;
+}
+
+#nav4 {
+    background-image: url("/images/gray.icon.png");
+}
+
+#nav4:hover {
+    text-shadow: #aaa 0 0 18px;
+}
+
+#nav5 {
+    background-image: url("/images/blue.icon.png");
+}
+
+#nav5:hover {
+    text-shadow: #8ed1ff 0 0 18px;
+}
