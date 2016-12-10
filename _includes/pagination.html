@@ -1,0 +1,31 @@
+<nav class="pagination" role="pagination">
+  <ul>
+    <!-- Don't build paginator if we have only one page -->
+    {% unless paginator.total_pages == 1 %}
+        {% if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path }}" class="previous">&laquo; 前一頁</a></li>
+        {% else %}
+            <span class="previous">&laquo; 前一頁</span>
+        {% endif %}
+            <span class="page_number ">第 {{ paginator.page }} 頁，共 {{ paginator.total_pages }} 頁</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">下一頁 &raquo;</a>
+        {% else %}
+            <span class="next ">下一頁 &raquo;</span>
+        {% endif %}
+    {% endunless %}
+<!--    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <li><a class="next" href="{{ "/news/" | prepend: site.baseurl }}" title="Articles new">&laquo; Prev</a></li>
+      {% else %}
+        <li><a class="next" href="{{ paginator.previous_page }}/" title="Articles new">&laquo; Prev</a></li>
+      {% endif %}
+    {% endif %}
+
+    <li><span class="page-number">Page {{paginator.page}} of {{paginator.total_pages}}</span></li>
+
+    {% if paginator.next_page %}
+      <li><a class="prev" href="{{ paginator.next_page }}/" title="Articles old">Next &raquo;</a></li>
+    {% endif %}-->
+  </ul>
+</nav>

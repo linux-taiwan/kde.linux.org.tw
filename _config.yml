@@ -1,22 +1,38 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+permalink   : news/:categories/:year/:title/
+markdown    : kramdown
+highlighter : pygments
 
-# Site settings
-title: KDE 台灣支援站
-email: help@linux.org.tw
-description: > # this means to ignore newlines until "baseurl:"
-  KDE 台灣站是由一群自由軟體社群的熱血志工打造並維護的。<br>
-  在這裡，我們將不定時分享/翻譯關於 K 桌面環境的新知。<br>
-  目前台灣在地化的 K 桌面環境發行版有 ezgo 計畫，以及計畫背後的 KDE 中文化翻譯人員。<br>
-  假如您對貢獻自由軟體十分有興趣的話，歡迎讓我們知道。
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://kde.linux.org.tw" # the base hostname & protocol for your site
-#twitter_username: brli7848
-#github_username:  brli
+paginate: 2 #6
+comments: true
+paginate_path: "news/:num"
 
-# Build settings
-markdown: kramdown
+sass:
+  sass_dir: _scss
+
+cover: /assets/images/default-cover.png
+
+# site title, description, meta_description, meta_keywords
+# Details for the RSS feed generator
+name: KDE 台灣社群
+title: KDE 台灣
+description: "台灣在地的 KDE 支援社群"
+url: http://kde.linux.org.tw
+baseurl: ""
+domain_name: linux.org.tw
+# google_analytics: UA-52446115-1
+repo: http://github.com/nandomoreirame/mug
+disqus_shortname: "brli"
+
+author:
+  name      : 
+  image     : 
+  email     : help@linux.org.tw
+  url       : http://kde.linux.org.tw/
+  facebook  : 
+  twitter   : 
+  instagram : 
+  github    : https://github.com/linux-taiwan/kde.linux.org.tw
+  linkedin  : 
+  bio       : ""
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
