@@ -44,41 +44,6 @@
   }
 }
 
-.btn {
-  transition: background-color .2s linear, color .2s linear, border-color .2s linear;
-  border-radius: 4px;
-  box-shadow: none;
-  background-color: $primary-color;
-  border: 2px solid lighten($primary-color, 4%);
-  color: $white-color;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 700;
-  line-height: 2.6em;
-  padding: 0 1.6em;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-
-  &:hover,
-  &:active {
-    background-color: lighten($primary-color, 5%);
-    border-color: lighten($primary-color, 7%);
-    color: darken($white-color, 5%);
-  }
-
-  &.ghost {
-    background-color: transparent;
-    border-color: rgba($white-color, .7);
-
-    &:hover,
-    &:active {
-      background-color: rgba($white-color, .1);
-      border-color: $white-color;
-    }
-  }
-}
-
 .search {
   position: relative;
 
@@ -98,38 +63,6 @@
 
   .no-results {
     color: #f00;
-  }
-}
-
-.dropdown {
-  background-color: $white-color;
-  box-shadow: 0px 2px 2px rgba($black-color, .2);
-  position: absolute;
-  top: 100%;
-  margin-top: 1px;
-
-  &, li, a {
-    display: block;
-    width: 100%;
-  }
-
-  li {
-    border-bottom: 1px solid $silver-color;
-    display: block;
-  }
-
-  a, .no-results {
-    font-size: $font-size-base;
-    padding: .6em 1.2em;
-    text-decoration: none;
-    transition: background-color .2s ease, color .2s ease;
-  }
-
-  a:hover,
-  a:focus,
-  a:active {
-    background-color: $primary-color;
-    color: $white-color;
   }
 }
 
@@ -161,14 +94,6 @@
 /**
  * Site Header
  */
-.site-header,
-.site-footer {
-  background: url("../images/background.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background-color: $secondary-color;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .site-header {
   border-top: 5px solid $black-color;
   padding: {
@@ -182,6 +107,15 @@
     color: rgba($black-color, .75);
   }
 }
+
+.site-footer {
+  background: url("../images/background.jpg");
+  background-color: $secondary-color;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+
 
 .nav-toogle {
   position: absolute;
@@ -214,7 +148,6 @@
 
 .post {
   margin: 3em 0;
-
   h1 {
     margin-bottom: .3em;
   }
