@@ -1,15 +1,14 @@
 
-$icon-font-family: 'mugicons';
-$icon-path: '../fonts/';
+$icon-font-family: 'FontAwesome';
 
 $icon-category: "\e900";
 $icon-tags: "\e901";
 $icon-comments: "\e902";
 $icon-comment-o: "\e903";
 $icon-comments-o: "\e905";
-$icon-search: "\e906";
+$icon-search: "\f002";
 $icon-star-o: "\e907";
-$icon-heart: "\e908";
+$icon-heart: "\f004";
 $icon-share: "\e909";
 $icon-facebook: "\e90a";
 $icon-facebook-rounded: "\e90b";
@@ -20,11 +19,7 @@ $icon-github: "\e90f";
 
 @font-face {
   font-family: $icon-font-family;
-  src: url('#{$icon-path}#{$icon-font-family}.eot?pfzr1n');
-  src: url('#{$icon-path}#{$icon-font-family}.eot?pfzr1n#iefix') format('embedded-opentype'),
-       url('#{$icon-path}#{$icon-font-family}.ttf?pfzr1n') format('truetype'),
-       url('#{$icon-path}#{$icon-font-family}.woff?pfzr1n') format('woff'),
-       url('#{$icon-path}#{$icon-font-family}.svg?pfzr1n##{$icon-font-family}') format('svg');
+  src: url('#{$icon-font-family}.eot?pfzr1n');
   font-weight: normal;
   font-style: normal;
 }
