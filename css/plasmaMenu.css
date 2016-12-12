@@ -5,12 +5,10 @@
 .header .plasmamenu_box {
 	display: table;
 	text-align: left;
-	margin: 0 auto;
+	float: left;
+	margin: 0 30% 0 35%;
 	text-shadow: #fff 0px 0px 3px; 
-	float: left; 
-	margin-left: 12px;
-	width: 840px;
-	z-index: 95;
+	width: auto;
 }
 
 .header .plasmamenu_box a {
@@ -20,7 +18,7 @@
 
 .header .plasmamenu_box h2 {
 	color: #555; 
-	font-size: 14px; 
+	font-size: 84%;
 	font-weight: normal; 
 	padding-left: 10px; 
 	text-transform: uppercase;
@@ -71,8 +69,7 @@
 .header .plasmamenu_box  div div div div ul li div div ul li a { 
 	color: #444;
 	text-shadow: #ffffff 1px 1px 1px;
-	font-size: 13px;
-	vertical-align: top;
+	font-size: 84%;
 	display: block;
 }
 
@@ -81,7 +78,6 @@
 	text-shadow: #ffffff 1px 1px 1px;
 	font-size: 13px; 
 	font-weight: normal;
-	width: 165px;
 	display: inline;
 }
 

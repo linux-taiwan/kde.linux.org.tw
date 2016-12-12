@@ -1,28 +1,29 @@
 <header class="site-header">
-  <div class="container txt-center">
-
-    <div class="header">
+  <div class="header">
       <nav class="plasmamenu_box">
         <ul>
-          <li><h2 id="nav1"><a href="{{ "/" | prepend: site.baseurl }}">首頁</a></h2></li>
-          <li><h2 id="nav2"><a href="{{ "/news" | prepend: site.baseurl }}">最新消息</a></h2></li>
-          <li><h2 id="nav3"><a href="{{ "/getting-started" | prepend: site.baseurl }}">新手上路</a></h2></li>
-          <li><h2 id="nav4"><a href="{{ "/community" | prepend: site.baseurl }}">線上社群</a></h2></li>
-          <li><h2 id="nav5"><a href="{{ "/join-us" | prepend: site.baseurl }}">加入我們</a></h2></li>
+            <li><h2 id="nav1"><a href="{{ "/" | prepend: site.baseurl }}">首頁</a></h2></li>
+            <li><h2 id="nav2"><a href="{{ "/news" | prepend: site.baseurl }}">最新消息</a></h2></li>
+            <li><h2 id="nav3"><a href="{{ "/getting-started" | prepend: site.baseurl }}">新手上路</a></h2></li>
+            <li><h2 id="nav4"><a href="{{ "/community" | prepend: site.baseurl }}">線上社群</a></h2></li>
+            <li><h2 id="nav5"><a href="{{ "/join-us" | prepend: site.baseurl }}">加入我們</a></h2></li>
         </ul>
       </nav>
-    </div>
-
-    {% if page.id %}
-      <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    {% elsif page.bodyclass == 'page' %}
-      <h1 class="post-title">{{ page.title }}</h1>
-    {% else %}
-      <h1>Hi, I'm {{ site.name }}</h1>
-      {% include search.html %}
-    {% endif %}
-
   </div>
-
 </header>
+<div class="container txt-center">
+
+
+  {% if page.id %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  {% elsif page.bodyclass == 'page' %}
+    <h1 class="post-title">{{ page.title }}</h1>
+  {% else %}
+    <h1>歡迎光臨 {{ site.name }}</h1>
+    {% include search.html %}
+  {% endif %}
+
+</div>
+
+
