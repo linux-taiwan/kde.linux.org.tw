@@ -5,10 +5,10 @@
 .header .plasmamenu_box {
 	display: table;
 	text-align: left;
-	margin: 0 auto;
+	float: left;
+	margin: 0 30% 0 35%;
 	text-shadow: #fff 0px 0px 3px; 
-	width: 840px;
-	z-index: 95;
+	width: auto;
 }
 
 .header .plasmamenu_box a {
