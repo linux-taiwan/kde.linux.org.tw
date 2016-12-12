@@ -94,23 +94,8 @@
 /**
  * Site Header
  */
-.site-header {
-  border-top: 5px solid $black-color;
-  padding: {
-    top: 1.4em;
-    bottom: 3em;
-  };
-  margin-bottom: 1.4em;
-
-  h1 {
-    margin-top: 1em;
-    color: rgba($black-color, .75);
-  }
-}
-
 .site-footer {
-  background: url("../images/background.jpg");
-  background-color: $secondary-color;
+  background-color: transparent;
   background-repeat: repeat-y;
   background-size: cover;
 }

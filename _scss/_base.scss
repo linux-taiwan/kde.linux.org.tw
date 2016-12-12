@@ -23,10 +23,11 @@ html {
 }
 
 body {
-  background: $bg-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: .01em;
+  background: url("../images/background.jpg");
+  background-repeat: no-repeat;
 }
 
 body,

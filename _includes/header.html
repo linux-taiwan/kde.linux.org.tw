@@ -13,13 +13,14 @@
 </header>
 <div class="container txt-center">
 
+
   {% if page.id %}
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   {% elsif page.bodyclass == 'page' %}
     <h1 class="post-title">{{ page.title }}</h1>
   {% else %}
-    <h1>Hi, I'm {{ site.name }}</h1>
+    <h1>歡迎光臨 {{ site.name }}</h1>
     {% include search.html %}
   {% endif %}
 
