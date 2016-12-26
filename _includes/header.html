@@ -1,12 +1,46 @@
 <header class="site-header">
   <div class="header">
       <nav class="plasmamenu_box">
+        <input id="menu-trigger" name="menu-trigger" type="checkbox" />
+        <label for="menu-trigger">
+          <img alt="" src="{{ '/images/burger.svg' | prepend: site.baseurl }}" height="20" width="20"/>
+        </label>
         <ul>
-            <li><h2 id="nav1"><a href="{{ "/" | prepend: site.baseurl }}">首頁</a></h2></li>
-            <li><h2 id="nav2"><a href="{{ "/news" | prepend: site.baseurl }}">最新消息</a></h2></li>
-            <li><h2 id="nav3"><a href="{{ "/getting-started" | prepend: site.baseurl }}">新手上路</a></h2></li>
-            <li><h2 id="nav4"><a href="{{ "/community" | prepend: site.baseurl }}">線上社群</a></h2></li>
-            <li><h2 id="nav5"><a href="{{ "/join-us" | prepend: site.baseurl }}">加入我們</a></h2></li>
+            <li>
+              <a href="{{ "/" | prepend: site.baseurl }}">
+                <h2 id="nav1">
+                  首頁
+                </h2>
+              </a>
+            </li>
+            <li>
+              <a href="{{ "/news" | prepend: site.baseurl }}">
+                <h2 id="nav2">
+                  最新消息
+                </h2>
+              </a>
+            </li>
+            <li>
+              <a href="{{ "/getting-started" | prepend: site.baseurl }}">
+                <h2 id="nav3">
+                  新手上路
+                </h2>
+              </a>
+            </li>
+            <li>
+              <a href="{{ "/community" | prepend: site.baseurl }}">
+                <h2 id="nav4">
+                  線上社群
+                </h2>
+              </a>
+            </li>
+            <li>
+              <a href="{{ "/join-us" | prepend: site.baseurl }}">
+                <h2 id="nav5">
+                  加入我們
+                </h2>
+              </a>
+            </li>
         </ul>
       </nav>
   </div>
@@ -22,5 +56,3 @@
     <h1>歡迎光臨 {{ site.name }}</h1>
   {% endif %}
 </div>
-
-

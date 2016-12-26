@@ -1,4 +1,8 @@
 /* nav */
+nav label, nav input[type="checkbox"] {
+    display: none;
+}
+
 nav ul li {
     display: inline-block;
     margin-top: 41px;
@@ -52,4 +56,35 @@ nav a {
 
 #nav5:hover {
     text-shadow: #8ed1ff 0 0 18px;
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+
+  }
+  nav label {
+    display: inline-block;
+    float: right;
+    padding: 1em 1.5em;
+  }
+  nav ul {
+    display: none;
+  }
+  nav input[type="checkbox"]:checked ~ ul {
+    display: block;
+    margin-bottom: 2em;
+  }
+  nav ul li {
+    margin: 0;
+    width: 100%;
+  }
+  nav ul li a {
+    display: block;
+    margin: 0 !important;
+    padding: 15px;
+    width: 100%;
+  }
+  nav ul li a h2 {
+    display: inline-block;
+  }
 }
