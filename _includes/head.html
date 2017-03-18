@@ -17,10 +17,6 @@
 {% capture page_description %}{{ page_description | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
 <meta name="description" content="{{ page_description }}">
 
-{% comment %}======================= meta keywords ============================{% endcomment %}
-<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
-
-
 {% comment %}=====================  stylesheet main.css ======================{% endcomment %}
 <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/css/plasmaMenu.css" | prepend: site.baseurl }}">
