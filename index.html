@@ -4,7 +4,10 @@ title: 首頁
 bodyclass: home
 ---
 
-<section class="posts txt-center container">
+<script src="https://code.jquery.com/jquery-1.11.3.js" integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0=" crossorigin="anonymous"></script>
+<script src="http://rss2json.acelan.idv.tw/lib/feed.js"></script>
+
+<section class="posts container wrapper">
 
     <p>KDE 台灣站是由一群自由軟體社群的熱血志工打造並維護的。
        在這裡，我們將不定時分享/翻譯關於 K 桌面環境的新知。
@@ -13,5 +16,61 @@ bodyclass: home
        但我們不限於此，歡迎更多對於 KDE 桌面環境有興趣的新人加入。
        假如您對貢獻自由軟體十分有興趣的話，歡迎讓我們知道。 </p>
 
+    <div class="news_wrapper">
+        <h2>最新消息</h2>
+        <ul id="news_posts">
+        {% for post in site.posts limit:5 %}
+            <li class="post">
+                <div class="post__date"><span>{{ post.date | date: "%Y-%m-%d" }}</span></div>
+                <div class="post__title"><span><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></span></div>
+            </li>
+        {% endfor %}
+	</ul>
+    </div>
+
+    <div class="forum_wrapper">
+        <h2>論壇動態</h2>
+        <ul id="forum_posts"></ul>
+    </div>
+
+    <div class="planet_wrapper">
+        <h2>KDE 星球</h2>
+        <ul id="planet_posts"></ul>
+    </div>
+<script>
+var objRss1 = new rss();
+objRss1.displayAsinc( 'https://groups.google.com/forum/feed/kde-tw/msgs/rss_v2_0.xml', 'forum_posts', 'pubDate', 'date', 'desc', 5, 100);
+/* has encoding issue, so comment it out and use api.rss2json.com first
+var objRss2 = new rss();
+objRss2.displayAsinc( 'https://planetkde.org/zh/rss20.xml', 'planet_posts', 'pubDate', 'date', 'desc', 10, 512, 1);
+*/
+</script>
+<script>
+fetch('https://api.rss2json.com/v1/api.json?rss_url=https://planetkde.org/zh/rss20.xml').then((res) => res.json())
+.then(function(info) {
+return info.items;
+})
+.then(function(posts) {
+var content = '';
+var i = 0;
+posts.forEach(function(post) {
+	i++;
+	content += `<time>${post.pubDate}</time>`;
+	content += `<li><a href=${post.link}><h4>${post.title}</h4></a></li>`;
+	content += `<li>${post.description}</li>`;
+	if( i > 10) {
+		return content;
+	}
+});
+return content;
+})
+.catch(function(err) {
+console.error(err);
+return "<p>擷取星球貼文失敗，請稍後重試！</p>";
+})
+.then(function (content) {
+document.getElementById('planet_posts').innerHTML += content;
+});
+</script>
 </section>
 

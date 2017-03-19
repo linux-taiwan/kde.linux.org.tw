@@ -1,14 +1,19 @@
+.wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 0 1em;
+}
+
 .header {
-	height: 60px;
+	position: relative;
 }
 
 .header .plasmamenu_box {
 	display: table;
 	text-align: left;
 	float: left;
-  text-align: center;
-  text-shadow: #fff 0px 0px 3px;
-  width: 100%;
+	text-shadow: #fff 0px 0px 3px;
+	width: 100%;
 }
 @media only screen and (max-width: 500px) {
   .header .plasmamenu_box {
@@ -100,7 +105,7 @@
 	display: none;
 	position: absolute;
 	left: 173px;
-	margin-top: -38px;
+	margin-top: 0px;
 	z-index: 100;
 }
 
@@ -112,7 +117,7 @@
 	width: 16px;
 	height: 16px;
 	margin-left: 8px;
-	margin-top: 4px;
+	margin-top: 0px;
 	position: absolute;
 }
 
